@@ -8,10 +8,7 @@ const forecost = (latitude,longtitude, callback) => {
         } else if (body.error) {
             callback('Unable to find location. Try another search.', undefined)
         }else{
-            callback(undefined,{
-                temperature: body.current.temperature,
-                wind_speed: body.current.wind_speed
-            })
+            callback(undefined," It is currently " + body.current.temperature + " degrees out . It feels like "+ body.current.feelslike+" degrees out")
         }
         
     })  
